@@ -1,0 +1,117 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$timing: 0.4s;
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #023e8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 20px 0 0 0;
+        color: #EEEEEE;
+        font-size: 3em;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 30px 0 0 0;
+        font-size: 1.4em;
+        color: #EEEEEE;
+    }
+
+    .outline-button {
+        margin-top: 20px;
+        background-color: #EEEEEE;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2em;
+        color: #023e8a;
+        cursor: pointer;
+
+        &:hover {
+            background-color: transparent;
+            color: #EEEEEE;
+            border: 1px solid #EEEEEE;
+            margin-top: 18px;
+        }
+    }
+}
+
+.greendiv {
+    width: 100vw;
+    height: 100vh;
+    background-color: #478849;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .score {
+        font-size: 18px;
+        color: #EEEEEE;
+    }
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #c1121f;
+    position: relative;
+    overflow: hidden;
+
+    #gameOver {
+        font-size: 18px;
+        color: #EEEEEE;
+    }
+
+    .outline-button {
+        margin-top: 20px;
+        background-color: #EEEEEE;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2em;
+        color: #c1121f;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: transparent;
+            color: #EEEEEE;
+            border: 1px solid #EEEEEE;
+            margin-top: 18px;
+        }
+    }
+    
+}
+
+.none {
+    display: none;
+}

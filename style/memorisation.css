@@ -1,0 +1,464 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.none {
+  display: none !important;
+}
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background-color: #023e8a;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30%;
+}
+
+#numberstext {
+  text-align: center;
+  display: block;
+  color: #FFF;
+  padding: 15px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+p {
+  display: inline;
+  color: red;
+}
+
+strong {
+  color: green;
+}
+
+#input_correction,
+#text_correction {
+  font-size: 25px;
+  text-align: center;
+}
+
+#barre {
+  height: 10px;
+  position: absolute;
+  z-index: 999999999;
+  top: 50;
+  left: 0;
+}
+
+.play {
+  -webkit-animation: barre linear;
+          animation: barre linear;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.barrefond {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  height: 10px;
+}
+
+@-webkit-keyframes barre {
+  0% {
+    width: 0%;
+    background-color: green;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    width: 100%;
+    background-color: red;
+  }
+}
+
+@keyframes barre {
+  0% {
+    width: 0%;
+    background-color: green;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    width: 100%;
+    background-color: red;
+  }
+}
+
+.inputvalidate {
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputvalidate #button {
+  background-color: #4CAF50 !important;
+  /* Green */
+  border: none !important;
+  color: white !important;
+  padding: 15px 5px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  display: inline-block;
+  font-size: 16px !important;
+  width: 20%;
+}
+
+.inputvalidate #input {
+  background-color: transparent;
+  border: white 1px solid !important;
+  color: white !important;
+  padding: 15px 5px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  display: inline-block;
+  font-size: 16px !important;
+  width: 70%;
+}
+
+.inputvalidate #input:focus {
+  outline: none;
+}
+
+.rules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.rules .rulescontainer {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.rules .rulescontainer #launchGame {
+  text-decoration: none;
+  background-color: #023e8a;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  width: 40%;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.rules .rulescontainer .welcome {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #023e8a;
+  margin-bottom: 10px;
+}
+
+.rules .rulescontainer .rulestext {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #023e8a;
+  margin-bottom: 10px;
+}
+
+.rules .rulescontainer .goodluck {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #023e8a;
+  margin-bottom: 20px;
+}
+
+#rejouer {
+  text-decoration: none;
+  background-color: #FFF;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  width: 40%;
+  color: #023e8a;
+  border-radius: 20px;
+  padding: 10px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .inputvalidate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .inputvalidate #button {
+    background-color: #4CAF50 !important;
+    /* Green */
+    border: none !important;
+    color: white !important;
+    padding: 10px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px !important;
+    width: 60%;
+  }
+  .inputvalidate #input {
+    background-color: transparent;
+    border: white 1px solid !important;
+    color: white !important;
+    padding: 10px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px !important;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .rules {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  .rules .rulescontainer {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+    padding: 10px 30px;
+  }
+  .rules .rulescontainer #launchGame {
+    text-decoration: none;
+    background-color: #023e8a;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .rules .rulescontainer .welcome {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 10px;
+  }
+  .rules .rulescontainer .rulestext {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .rules .rulescontainer .goodluck {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .inputvalidate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .inputvalidate #button {
+    background-color: #4CAF50 !important;
+    /* Green */
+    border: none !important;
+    color: white !important;
+    padding: 10px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px !important;
+    width: 60%;
+  }
+  .inputvalidate #input {
+    background-color: transparent;
+    border: white 1px solid !important;
+    color: white !important;
+    padding: 10px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px !important;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .rules {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+  }
+  .rules .rulescontainer {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+    padding: 10px 30px;
+  }
+  .rules .rulescontainer #launchGame {
+    text-decoration: none;
+    background-color: #023e8a;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .rules .rulescontainer .welcome {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 10px;
+  }
+  .rules .rulescontainer .rulestext {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .rules .rulescontainer .goodluck {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=memorisation.css.map */

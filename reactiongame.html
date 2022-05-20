@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reactiongame.css">
+
+    <title>Réaction game</title>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <h1>Réaction game</h1>
+        <p>
+            Le but du jeu est simple, attendez que le fond d'écran soit vert pour cliquer n'importe où sur la page et
+            testez votre temps de réaction !
+        </p>
+        <button type="button" id="play" class="outline-button">Jouer</button>
+    </div>
+    <a id="greendiv" class="greendiv none">
+        <p class="score"></p>
+    </a>
+    <div id="game" class="game none">
+        <p id="gameOver" class="none">Eh non ! Tu as cliqué trop tôt</p>
+        <a id="playAgain" class="outline-button none" href="javascript:;">Rejouer</a>
+    </div>
+    <script src="scripts/reaction.js"></script>
+</body>
+
+</html>
+</script>
