@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/towerofhanoi.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="hanoi-header">
+        <h1>
+            Towers of Hanoi
+
+        </h1>
+    </header>
+    <main>
+        <section id="gameBoard">
+            <div id="options">
+                <h1>Choose Your Difficulty!</h1>
+                <div class="button-row">
+                    <button data-layers="3" class="difficulty-btn" type="button">Easy</button>
+                    <button data-layers="4" class="difficulty-btn" type="button">Medium</button>
+                    <button data-layers="5" class="difficulty-btn" type="button">Hard</button>
+                </div>
+            </div>
+            <span id="scoreboard" class="score-display">0</span>
+            <div id="column1" class="column"></div>
+            <div id="column2" class="column"></div>
+            <div id="column3" class="column"></div>
+
+            <div id="win">
+                <h1>You Won!</h1>
+                <h2>You did it in <span class="score-display">0</span> Moves</h2>
+                <!--      <button class="play-again-btn" onclick="playAgain()">Play Again</button>-->
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="scripts/towerofhanoi.js"></script>
+</body>
+
+</html>
