@@ -6,24 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/towerofhanoi.css">
-    <title>Document</title>
+    <title>Tower of hanoi</title>
 </head>
 
 <body>
-    <header id="hanoi-header">
-        <h1>
-            Towers of Hanoi
-
-        </h1>
-    </header>
     <main>
         <section id="gameBoard">
             <div id="options">
-                <h1>Choose Your Difficulty!</h1>
+                <h1>Choisis ta difficulté</h1>
                 <div class="button-row">
-                    <button data-layers="3" class="difficulty-btn" type="button">Easy</button>
-                    <button data-layers="4" class="difficulty-btn" type="button">Medium</button>
-                    <button data-layers="5" class="difficulty-btn" type="button">Hard</button>
+                    <button data-layers="3" class="difficulty-btn" type="button">Facile</button>
+                    <button data-layers="4" class="difficulty-btn" type="button">Moyen</button>
+                    <button data-layers="5" class="difficulty-btn" type="button">Difficile</button>
+                    <button data-layers="6" class="difficulty-btn" type="button">Extreme</button>
+                    <button data-layers="7" class="difficulty-btn" type="button">Insane</button>
+                    <button data-layers="8" class="difficulty-btn" type="button">Dark souls</button>
+
                 </div>
             </div>
             <span id="scoreboard" class="score-display">0</span>
@@ -32,9 +30,9 @@
             <div id="column3" class="column"></div>
 
             <div id="win">
-                <h1>You Won!</h1>
-                <h2>You did it in <span class="score-display">0</span> Moves</h2>
-                <!--      <button class="play-again-btn" onclick="playAgain()">Play Again</button>-->
+                <h1>Tu as réussi, bravo!</h1>
+                <h2>Tu as pu le faire en <span class="score-display">0</span> coups</h2>
+                <button class="play-again-btn" onclick="playAgain()">Houer à nouveau</button>
             </div>
         </section>
     </main>

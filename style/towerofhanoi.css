@@ -3,20 +3,11 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: #023e8a;
-}
-
-#hanoi-header {
-  min-height: 10vh;
-  background-color: #023e8a;
-}
-
-#hanoi-header > h1 {
-  font-size: 7vh;
-  margin: 0rem;
-  padding: 1vh;
-  color: #c1121f;
 }
 
 #scoreboard {
@@ -32,11 +23,11 @@ h1, h2, h3, h4 {
 #scoreboard:before {
   content: 'moves ';
   font-size: 0.5em;
-  color: #666;
+  color: #c1121f;
 }
 
 #gameBoard {
-  min-height: 90vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,9 +53,9 @@ h1, h2, h3, h4 {
 
 .column:before {
   content: '';
-  width: 1.5rem;
+  width: 1rem;
   background: #7a7162;
-  height: 20rem;
+  height: 27rem;
   margin-left: auto;
   margin-right: auto;
   border-top-right-radius: .6rem;
@@ -87,8 +78,6 @@ h1, h2, h3, h4 {
   position: absolute;
   bottom: 0rem;
   margin: auto;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .disc:nth-last-of-type(1) {
@@ -111,34 +100,64 @@ h1, h2, h3, h4 {
   bottom: 12.5rem;
 }
 
+.disc:nth-last-of-type(6) {
+  bottom: 15.6em;
+}
+
+.disc:nth-last-of-type(7) {
+  bottom: 18.7em;
+}
+
+.disc:nth-last-of-type(8) {
+  bottom: 21.8em;
+}
+
 .disc.layer1 {
-  width: 9rem;
-  left: calc(50% - 4.5rem);
+  width: 4rem;
+  left: calc(50% - 2rem);
   background: #0D97FB;
 }
 
 .disc.layer2 {
-  width: 13rem;
-  left: calc(50% - 6.5rem);
+  width: 7rem;
+  left: calc(50% - 3.5rem);
   background: #0B43E3;
 }
 
 .disc.layer3 {
-  width: 17rem;
-  left: calc(50% - 8.5rem);
+  width: 10rem;
+  left: calc(50% - 5rem);
   background: #1100FA;
 }
 
 .disc.layer4 {
-  width: 21rem;
-  left: calc(50% - 10.5rem);
+  width: 13rem;
+  left: calc(50% - 6.5rem);
   background: #5E00EB;
 }
 
 .disc.layer5 {
+  width: 16rem;
+  left: calc(50% - 8rem);
+  background: #BD00FF;
+}
+
+.disc.layer6 {
+  width: 19rem;
+  left: calc(50% - 9.5rem);
+  background: #4b0067;
+}
+
+.disc.layer7 {
+  width: 22rem;
+  left: calc(50% - 11rem);
+  background: #190023;
+}
+
+.disc.layer8 {
   width: 25rem;
   left: calc(50% - 12.5rem);
-  background: #BD00FF;
+  background: #000000;
 }
 
 .column.selected > .disc:first-of-type {
@@ -148,21 +167,22 @@ h1, h2, h3, h4 {
 #options {
   position: absolute;
   left: 0rem;
-  top: 0rem;
+  top: 25%;
   width: 100%;
   z-index: 10;
 }
 
-#options h1, #options h2 {
+#options h1,
+#options h2 {
   text-align: center;
 }
 
 #options h1 {
-  font-size: 6rem;
+  font-size: 80px;
 }
 
 #options h2 {
-  font-size: 6rem;
+  font-size: 80px;
 }
 
 .button-row {
@@ -170,7 +190,7 @@ h1, h2, h3, h4 {
   display: -ms-flexbox;
   display: flex;
   margin: 5rem auto 0rem auto;
-  width: 80%;
+  width: 100%;
 }
 
 button {
@@ -190,6 +210,10 @@ button {
 button:hover {
   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.22);
           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.22);
+  background-color: #c1121f;
+  color: #fff;
+  border: none;
+  padding: calc(2rem + .1rem) calc(1rem + .1rem);
 }
 
 #win {
@@ -220,17 +244,8 @@ button:hover {
     margin-bottom: 0.5rem;
   }
   #options h1 {
-    font-size: 2em;
+    font-size: 50px;
     text-align: center;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  #hanoi-header > h1 {
-    text-align: center;
-    font-size: 7rem;
-    margin: 0rem;
-    padding: 12rem 5rem 0rem 5rem;
   }
 }
 /*# sourceMappingURL=towerofhanoi.css.map */

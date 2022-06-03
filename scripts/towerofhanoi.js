@@ -56,8 +56,8 @@ function playGame() {
         $('#column1').append('<div class="disc layer' + i + '" data-layer="' + i + '"></div>');
     }
     $('#options').hide(function() {
-		$('.column').fadeTo(1000, 1);
-        $('#scoreboard').fadeTo(1000, 1);
+		$('.column').fadeTo(100, 1);
+        $('#scoreboard').fadeTo(100, 1);
     });
     $('#gameBoard').data('score', 0);
     
@@ -68,7 +68,7 @@ function incrementCounter() {
     $('#gameBoard').data('score', score);
     $('.score-display').html(score);
 }
-/*
+
 function playAgain() {
   location.reload();
-}*/
+}
