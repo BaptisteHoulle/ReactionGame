@@ -1,0 +1,21 @@
+#shape {
+    height: 200px;
+    width: 200px;
+    background: red;
+    display: none;
+    position: relative;
+    transform: rotate(45deg);
+    border: 2px solid #000;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #023e8a;
+    font-size: 20px;
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}

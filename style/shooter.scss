@@ -1,0 +1,61 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 1em;
+}
+
+.canvasshooter_container {
+  background-color: black;
+}
+#canvasshooter_scoreboard_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  font-size: 24px;
+  color: white;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+#canvasshooter_ui_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+#canvasshooter_ui_score {
+  font-size: 3rem;
+  font-weight: bold;
+}
+#canvasshooter_ui_text {
+  font-size: 1rem;
+}
+#canvasshooter_ui_btn {
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border: none;
+  background-color: #0088ff;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.125s ease;
+}
+#canvasshooter_ui_btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

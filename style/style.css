@@ -103,58 +103,6 @@ svg {
   }
 }
 
-#games {
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  -webkit-transform: translate(40%, -50%);
-          transform: translate(40%, -50%);
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#games text {
-  stroke: red;
-  font-size: 80px;
-  stroke-width: 3px;
-  -webkit-animation: textAnimate 5s infinite alternate;
-          animation: textAnimate 5s infinite alternate;
-}
-
-@-webkit-keyframes textAnimate {
-  0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: 20%;
-  }
-  100% {
-    stroke-dasharray: 50% 0;
-    stroke-dashoffset: -20%;
-  }
-}
-
-@keyframes textAnimate {
-  0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: 20%;
-  }
-  100% {
-    stroke-dasharray: 50% 0;
-    stroke-dashoffset: -20%;
-  }
-}
-
 #app-cover {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,13 +119,31 @@ svg {
 }
 
 .row .button-cover {
-  width: 10%;
-  height: 100px;
+  width: 15%;
+  height: 150px;
   background-color: var(--blanc);
   -webkit-box-shadow: 0 10px 20px -8px var(--shadow);
           box-shadow: 0 10px 20px -8px var(--shadow);
   border-radius: 20px;
-  margin: 50px auto;
+  margin: 20px auto;
+}
+
+.row .button-cover .playsnake {
+  color: var(--blue);
+  font-weight: bold;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.row .button-cover .playTyping {
+  color: var(--red);
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
 }
 
 .row .timer #chrono {
@@ -583,6 +549,18 @@ svg {
 
 .flex a .memorisation {
   background-color: #c1121f;
+}
+
+.flex a .logic {
+  background-color: #179011;
+}
+
+.flex a .shooter {
+  background-color: #b4b71a;
+}
+
+.flex a .reaction2 {
+  background-color: #8e0098;
 }
 
 body {

@@ -87,37 +87,6 @@ svg {
   }
 }
 
-#games {
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translate(40%, -50%);
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#games text {
-  stroke: red;
-  font-size: 80px;
-  stroke-width: 3px;
-  animation: textAnimate 5s infinite alternate;
-}
-
-@keyframes textAnimate {
-  0% {
-    stroke-dasharray: 0 50%;
-    stroke-dashoffset: 20%;
-  }
-
-  100% {
-    stroke-dasharray: 50% 0;
-    stroke-dashoffset: -20%;
-  }
-}
-
 
 #app-cover {
   display: flex;
@@ -131,12 +100,30 @@ svg {
 
 
   .button-cover {
-    width: 10%;
-    height: 100px;
+    width: 15%;
+    height: 150px;
     background-color: var(--blanc);
     box-shadow: 0 10px 20px -8px var(--shadow);
     border-radius: 20px;
-    margin: 50px auto;
+    margin: 20px auto;
+
+    .playsnake {
+      color: var(--blue);
+      font-weight: bold;
+      position: absolute;
+      bottom: 15px;
+      text-align: center;
+      width:100%;
+    }
+
+    .playTyping {
+      color: var(--red);
+      font-weight: bold;
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      width:100%;
+    }
   }
 
   .timer {
@@ -520,6 +507,19 @@ color: white;
 
     .memorisation {
       background-color: #c1121f;
+    }
+
+    .logic {
+      background-color: #179011;
+    }
+
+
+    .shooter   {
+      background-color: #b4b71a;
+    }
+
+    .reaction2 {
+      background-color: #8e0098;
     }
   }
   

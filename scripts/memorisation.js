@@ -13,7 +13,7 @@ const rules = document.getElementById('rules');
 const container = document.getElementById('container');
 var input = document.getElementById('input');
 var button = document.getElementById('button');
-var ausgabe = document.getElementById('numberstext');
+var numberstext = document.getElementById('numberstext');
 var input_correction = document.getElementById('input_correction');
 var text_correction = document.getElementById('text_correction');
 const barre = document.getElementById('barre');
@@ -42,9 +42,9 @@ function newNumbers() {
     }
 
 
-    ausgabe.innerHTML = text;
+    numberstext.innerHTML = text;
     setTimeout(function () {
-        ausgabe.innerHTML = "";
+        numberstext.innerHTML = "";
         input.classList.remove('none');
         input.focus();
         button.classList.remove('none');
@@ -123,17 +123,17 @@ function validate() {
     } else {
 
         if (longueur <= 3) {
-            ausgabe.innerHTML = 'Tu as même pas réussi à mémoriser' + ' ' + longueur + ' ' + 'chiffres, c\'est pas terrible !';
+            numberstext.innerHTML = 'Tu as même pas réussi à mémoriser' + ' ' + longueur + ' ' + 'chiffres, c\'est pas terrible !';
         } else if (longueur > 3 && longueur <= 5) {
-            ausgabe.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est pas beaucoup !';
+            numberstext.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est pas beaucoup !';
         } else if (longueur >= 6 && longueur <= 7) {
-            ausgabe.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est pas trop mal !';
+            numberstext.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est pas trop mal !';
         } else if (longueur >= 8 && longueur <= 10) {
-            ausgabe.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est bien !';
+            numberstext.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est bien !';
         } else if (longueur >= 11 && longueur <= 13) {
-            ausgabe.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est très bien !';
+            numberstext.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est très bien !';
         } else if (longueur >= 14) {
-            ausgabe.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est bon t\'es trop fort, félicitations, mais j\'espère que tu n\'as pas triché !';
+            numberstext.innerHTML = 'Tu as mémorisé' + ' ' + (longueur - 1) + ' ' + 'chiffres, c\'est bon t\'es trop fort, félicitations, mais j\'espère que tu n\'as pas triché !';
         }
 
 

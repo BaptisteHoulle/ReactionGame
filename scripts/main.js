@@ -23,6 +23,9 @@ let startTime = new Date();
 
 let leaderboard = [];
 
+const playSnake = document.querySelector(".playsnake");
+const playTyping = document.querySelector(".playTyping");
+
 initLeaderboard();
 
 if (changegame) {
@@ -32,6 +35,16 @@ if (changegame) {
 function Changegameprint() {
 	generalboxtwo[0].classList.toggle("none");
 	regroupement[0].classList.toggle("none");
+
+	if (regroupement[0].classList.contains("none")) {
+		playSnake.classList.add("none");
+		playTyping.classList.remove("none");
+	}
+	else {
+		playSnake.classList.remove("none");
+		playTyping.classList.add("none");
+	}
+
 }
 
 if (leaderboardContainer) {
