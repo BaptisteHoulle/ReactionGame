@@ -1,0 +1,50 @@
+body {
+	height: 100vh;
+	background-color: #023e8a;
+	overflow-y: hidden;
+}
+
+#canvas {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.score,
+.gameover {
+	color: white;
+	font-size: 1.72rem;
+	z-index: 999;
+}
+
+.score {
+	padding: 1rem;
+}
+
+.gameover {
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.title {
+	font-size: 2.5rem;
+	margin-bottom: 0;
+}
+
+.instructions {
+	animation: blinker 1.2s ease-in-out infinite alternate;
+	font-size: 1rem;
+}
+
+.hide {
+	display: none;
+}
+
+@keyframes blinker {
+	to {
+		opacity: 0;
+	}
+}

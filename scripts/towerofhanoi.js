@@ -4,15 +4,17 @@ $('.column')
 $('.difficulty-btn')
     .on('click', playGame);
 
+let typeGame;
+let score;
 
 function selectOrMoveTopDisc() {
     var selectedColumns = $('#gameBoard').find('.column.selected');
 
     var $selectedColumn = (selectedColumns.length > 0) ? $(selectedColumns.get(0)) : null;
     var $thisColumn = $(this);
-    
+
     if (!$selectedColumn) {
-        if($thisColumn.children('.disc:first-of-type').length < 1) {
+        if ($thisColumn.children('.disc:first-of-type').length < 1) {
             return;
         }
         $thisColumn.toggleClass('selected');
@@ -20,16 +22,17 @@ function selectOrMoveTopDisc() {
     }
     if ($selectedColumn.attr('id') === $thisColumn.attr('id')) {
         $thisColumn.toggleClass('selected');
-        return;   
+        return;
     }
 
-    
+
     if (_validMove($selectedColumn, $thisColumn)) {
-    	var $disc = $($selectedColumn.children('.disc:first-of-type').get(0)).detach();
-    	$thisColumn.prepend($disc);
-	    $selectedColumn.removeClass('selected');
+        var $disc = $($selectedColumn.children('.disc:first-of-type').get(0)).detach();
+        $thisColumn.prepend($disc);
+        $selectedColumn.removeClass('selected');
         incrementCounter();
         _checkWin();
+        checkStars();
     }
 }
 
@@ -46,29 +49,57 @@ function _checkWin() {
         $('#gameBoard').addClass('game-won');
         $('.column').fadeTo(1000, 0);
         $('#scoreboard').fadeTo(1000, 0);
-        $('#win').fadeTo(1000, 1).css( 'zIndex', 20);
+        $('#win').fadeTo(1000, 1).css('zIndex', 20);
+
+        checkStars();
     }
 }
+
+const starsCount = [
+    [7, 10, 13],
+    [15, 30, 45],
+    [31, 50, 70],
+    [63, 90, 120],
+    [127, 170, 220],
+    [255, 500, 1000],
+    [511, 1200, 2400]
+];
 
 function playGame() {
     var layerCount = +$(this).data('layers');
     for (var i = 1; i <= layerCount; i++) {
-        $('#column1').append('<div class="disc layer' + i + '" data-layer="' + i + '"></div>');
+        $('#column1').append('<div class="disc layer' + i + '" data-layer="' + i + '"> <span class="discnumber"> ' + i + '</span></div>');
     }
-    $('#options').hide(function() {
-		$('.column').fadeTo(100, 1);
+    $('#options').hide(function () {
+        $('.column').fadeTo(100, 1);
         $('#scoreboard').fadeTo(100, 1);
     });
     $('#gameBoard').data('score', 0);
-    
+
+    typeGame = layerCount - 3;
+}
+
+
+function checkStars() {
+    for (var i = 0; i < starsCount[typeGame].length; i++) {
+
+        if (score > starsCount[typeGame][i]) {
+            $('.star-container').each(function(index, v){
+                $(this).find('.star').eq(i).removeClass('star-active');
+                
+            })
+        }
+    }
 }
 
 function incrementCounter() {
-    var score = $('#gameBoard').data('score') + 1;
+    score = $('#gameBoard').data('score') + 1;
     $('#gameBoard').data('score', score);
     $('.score-display').html(score);
 }
 
 function playAgain() {
-  location.reload();
+    location.reload();
 }
+
+//stars

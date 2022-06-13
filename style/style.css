@@ -555,12 +555,16 @@ svg {
   background-color: #179011;
 }
 
-.flex a .shooter {
+.flex a .buildtower {
   background-color: #b4b71a;
 }
 
 .flex a .reaction2 {
   background-color: #8e0098;
+}
+
+.flex a .adventure {
+  background-color: #00a793;
 }
 
 body {

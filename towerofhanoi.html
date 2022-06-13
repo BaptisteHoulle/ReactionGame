@@ -21,18 +21,29 @@
                     <button data-layers="5" class="difficulty-btn" type="button">Difficile</button>
                     <button data-layers="6" class="difficulty-btn" type="button">Extreme</button>
                     <button data-layers="7" class="difficulty-btn" type="button">Insane</button>
-                    <button data-layers="8" class="difficulty-btn" type="button">Dark souls</button>
+                    <button data-layers="8" class="difficulty-btn" type="button">Extreme</button>
+                    <button data-layers="9" class="difficulty-btn" type="button">Dark souls</button>
                 </div>
             </div>
             <span id="scoreboard" class="score-display">0</span>
             <div id="column1" class="column"></div>
-            <div id="column2" class="column"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <div id="column2" class="column">
+                <span class="star-container">
+                    <i class="fa-solid fa-star star star-active"></i>
+                    <i class="fa-solid fa-star star star-active"></i>
+                    <i class="fa-solid fa-star star star-active"></i>
+                </span>
+            </div>
             <div id="column3" class="column"></div>
-
             <div id="win">
                 <h1>Tu as réussi, bravo!</h1>
                 <h2>Tu as pu le faire en <span class="score-display">0</span> coups</h2>
-                <button class="play-again-btn" onclick="playAgain()">Houer à nouveau</button>
+                <button class="play-again-btn" onclick="playAgain()">Jouer à nouveau</button>
+                <span class="star-container container2">
+                    <i class="fa-solid fa-star star star-active"></i>
+                    <i class="fa-solid fa-star star star-active"></i>
+                    <i class="fa-solid fa-star star star-active"></i>
+                </span>
             </div>
         </section>
     </main>
