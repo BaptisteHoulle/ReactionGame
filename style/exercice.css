@@ -1,0 +1,69 @@
+body {
+  background-color: #EEE;
+  font-family: sans-serif;
+  padding: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs li {
+  float: left;
+  display: block;
+}
+
+.tabs a {
+  display: inline-block;
+  background-color: #EEE;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 10px 15px;
+}
+
+.tabs .active a {
+  background-color: #FFF;
+}
+
+.tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tabs-content {
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.fade.in {
+  opacity: 1;
+}
+/*# sourceMappingURL=exercice.css.map */
